@@ -1,45 +1,206 @@
-<html>
-<html lang="en"
-    <head>
-        <meta charset="UTF-8" />
-        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-        <title>My Porfolio</title>
-        <link rel="stylesheet" href="style.css" />
-        <link rel="stylesheet" href="mediaqueries.css" />
-    </head>
-    <body>
-        <nav id="desktop-nav">
-            <div class="logo">Harrison Nguyen</div>
-            <div>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <title>My Portfolio</title>
+    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="mediaqueries.css" />
+</head>
+<body>
+    <nav id="desktop-nav">
+        <div class="logo">Harrison Nguyen</div>
+        <div>
+            <ul class="nav-links">
+                <li><a href="#about">About</a></li>
+                <li><a href="#experience">Experience</a></li>
+                <li><a href="#projects">Projects</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </div>
+    </nav>
+    <nav id="hamburger">
+        <div class="logo">Harrison Nguyen</div>
+        <div class="hamburger-menu">
+            <div class="hamburger-icon" onclick="toggleMenu()">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+            <div class="menu-links">
+                <li><a href="#about" onclick="toggleMenu()">About</a></li>
+                <li><a href="#experience" onclick="toggleMenu()">Experience</a></li>
+                <li><a href="#projects" onclick="toggleMenu()">Projects</a></li>
+                <li><a href="#contact" onclick="toggleMenu()">Contact</a></li>
+            </div>
+        </div>
+    </nav>
+    <section id="profile">
+        <div class="section_pic-container">
+            <img src="./MyPortfolio/profile_pic.png" alt="Harrison Nguyen profile picture"/>
+        </div>
+        <div class="section_text">
+            <p class="section_text_p1">Hello, I'm</p>
+            <h1 class="title">Harrison Nguyen</h1>
+            <p class="section_text_p2">Student at Dickinson College</p>
+            <div class="btn_container">
+                <button class="btn btn-color-2" onclick="window.open('./MyPortfolio/HungNguyenHien_resume.pdf')">View Resume</button>
+                <button class="btn btn-color-1" onclick="location.href('./#contact')">Contact Info</button>
+            </div>
+            <div id="socials-container">
+                <a href="https://www.linkedin.com/in/hmh-nguyen/" target="_blank" class="social-link">
+                    <img src="./MyPortfolio/LinkedIn_logo_initials.png" alt="LinkedIn profile" class="icon social-icon">
+                </a>
+                <a href="https://github.com/hmhngx" target="_blank" class="social-link">
+                    <img src="./MyPortfolio/GitHub_Invertocat_Logo.png" alt="GitHub profile" class="icon social-icon">
+                </a>
+            </div>
+        </div>
+    </section>
+    <section id="about">
+        <p class="section_text_p1">Get To Know More</p>
+        <h1 class="title">About Me</h1>
+        <div class="section-container">
+            <div class="section_pic-container">
+                <img src="./MyPortfolio/about.png" alt="About picture" class="icon about-image"/>
+            </div>
+            <div class="about-details-container">
+                <div class="about-containers">
+                    <div class="details-container">
+                        <img src="./MyPortfolio/experience.png" alt="Experience icon" class="icon">
+                        <h3>Experience</h3>
+                        <p>Sophomore at Dickinson College</p>
+                    </div>
+                    <div class="details-container">
+                        <img src="./MyPortfolio/education.png" alt="Education icon" class="icon">
+                        <h3>Education</h3>
+                        <p>Graduated from Nguyen Hue High School for the Gifted</p>
+                    </div>
+                </div>
+                <div class="text-container">
+                    <p>Welcome to my portfolio! I'm currently a double major in Computer Science and Mathematics at Dickinson College. My academic journey is fueled by a passion for problem-solving and a fascination with how technology and mathematical theory intersect to create innovative solutions. Here, you'll find a showcase of my projects, research, and experiences that highlight my skills and interests in these fields. Thank you for visiting, and I hope you enjoy exploring my work!</p>
+                </div>
+            </div>
+        </div>
+        <img src="./MyPortfolio/downward_png.png" alt="Arrow icon" class="icon arrow" onclick="scrollToNextSection('experience')"/>
+    </section>
+    <section id="experience">
+        <p class="section_text_p1">Explore My</p>
+        <h1 class="title">Experience</h1>
+        <div class="experience-details-container">
+            <div class="skills-container">
+                <h2 class="experience">Computer Science Student</h2>
+                <div class="article-container">
+                    <article>
+                        <img src="./MyPortfolio/checkmark.png" alt="Experience icon" class="icon"/>
+                        <div>
+                            <h3>Python</h3>
+                            <p>Basic</p>
+                        </div>
+                    </article>
+                    <article>
+                        <img src="./MyPortfolio/checkmark.png" alt="Experience icon" class="icon"/>
+                        <div>
+                            <h3>Java</h3>
+                            <p>Basic</p>
+                        </div>
+                    </article>
+                    <article>
+                        <img src="./MyPortfolio/checkmark.png" alt="Experience icon" class="icon"/>
+                        <div>
+                            <h3>SQL Developer</h3>
+                            <p>Basic</p>
+                        </div>
+                    </article>
+                    <article>
+                        <img src="./MyPortfolio/checkmark.png" alt="Experience icon" class="icon"/>
+                        <div>
+                            <h3>Spring Boot</h3>
+                            <p>Basic</p>
+                        </div>
+                    </article>
+                </div>
+            </div>
+        </div>
+        <img src="./MyPortfolio/downward_png.png" alt="Arrow icon" class="icon arrow" onclick="scrollToNextSection('projects')"/>
+    </section> 
+    <section id="projects">
+        <p class="section_text_p1">Browse My Recent</p>
+        <h1 class="title">Projects</h1>
+        <div class="project-container">
+            <div class="details-container color-container">
+                <div class="article-container">
+                    <img src="./MyPortfolio/project_1.png" alt="Project 1" class="project-img"/>
+                </div>
+                <h2 class="experience-sub-title project-title">Project One</h2>
+                <div class="btn-container">
+                    <button class="btn btn-color-2 project-btn" onclick="location.href='https://github.com/hmhngx'">
+                        GitHub
+                    </button>
+                    <button class="btn btn-color-2 project-btn" onclick="location.href='https://github.com/hmhngx'">
+                        Live Demo
+                    </button>
+                </div>
+            </div>
+            <div class="details-container color-container">
+                <div class="article-container">
+                    <img src="./MyPortfolio/project_2.png" alt="Project 2" class="project-img"/>
+                </div>
+                <h2 class="experience-sub-title project-title">Project Two</h2>
+                <div class="btn-container">
+                    <button class="btn btn-color-2 project-btn" onclick="location.href='https://github.com/hmhngx'">
+                        GitHub
+                    </button>
+                    <button class="btn btn-color-2 project-btn" onclick="location.href='https://github.com/hmhngx'">
+                        Live Demo
+                    </button>
+                </div>
+            </div>
+            <div class="details-container color-container">
+                <div class="article-container">
+                    <img src="./MyPortfolio/project_3.png" alt="Project 3" class="project-img"/>
+                </div>
+                <h2 class="experience-sub-title project-title">Project Three</h2>
+                <div class="btn-container">
+                    <button class="btn btn-color-2 project-btn" onclick="location.href='https://github.com/hmhngx'">
+                        GitHub
+                    </button>
+                    <button class="btn btn-color-2 project-btn" onclick="location.href='https://github.com/hmhngx'">
+                        Live Demo
+                    </button>
+                </div>
+            </div>
+        </div>
+        <img src="./MyPortfolio/downward_png.png" alt="Arrow icon" class="icon arrow" onclick="scrollToNextSection('contact')"/>
+    </section>
+    <section id="contact">
+        <p class="section_text_p1">Get In Touch</p>
+        <h1 class="title">Contact Me</h1> 
+        <div class="contact-info-upper-container">
+            <div class="contact-info-container">
+                <img src="./MyPortfolio/Gmail_icon.png" alt="Email icon" class="icon contact-icon"/>
+                <p><a href="mailto:examplemail@gmail.com">nhminhhung05@gmail.com</a></p>
+            </div>
+            <div class="contact-info-container">
+                <img src="./MyPortfolio/LinkedIn_logo_initials.png" alt="LinkedIn icon" class="icon contact-icon"/>
+                <p><a href="https://www.linkedin.com/in/hmh-nguyen/">LinkedIn</a></p>
+            </div>
+        </div>
+        <img src="./MyPortfolio/downward_png.png" alt="Arrow icon" class="icon arrow" onclick="scrollToTop()"/>
+    </section>    
+    <footer>
+        <nav>
+            <div class="nav-links-connecter">
                 <ul class="nav-links">
                     <li><a href="#about">About</a></li>
-                    <li><a href="#education">Education</a></li>
+                    <li><a href="#experience">Experience</a></li>
                     <li><a href="#projects">Projects</a></li>
                     <li><a href="#contact">Contact</a></li>
                 </ul>
             </div>
         </nav>
-        <nav id="hamburger">
-            <div class="logo">Harrison Nguyen</div>
-            <div class="hamburger-memu">
-                <div class="hamburger-icon" onclick="toggleMenu()">
-                    <span></span>
-                    <span></span>
-                    <span></span>
-                </div>
-                <div class="menu-links">
-                    <li><a href="#about" onclick="toggleMenu()">About</a></li>
-                    <li><a href="#education" onclick="toggleMenu()">Education</a></li>
-                    <li><a href="#projects" onclick="toggleMenu()">Projects</a></li>
-                    <li><a href="#contact" onclick="toggleMenu()">Contact</a></li>
-                </div>
-            </div>
-        </nav>
-        <section id="profile">
-            <div class="section_pic-container">
-                <img src="./assets/" alt="">
-            </div>
-        </section>
-        <script src="script.js"></script>
-    </body>
-    </html>
+        <p>Copyright &#169; 2024 Harrison Nguyen. All rights reserved</p>
+    </footer>
+    <script src="script.js"></script>
+</body>
+</html>
